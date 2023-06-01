@@ -1,0 +1,36 @@
+:root {
+    --color-primary: #6A00FF;
+    --color-secondary: #8B00FF;
+    --color-tertiary: #A020F0;
+    --color-background: #0D0D0D;
+    --color-text: #FFFFFF;
+    --color-neon: #4efd54;
+  }
+
+.container{
+    padding: 150px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-background);
+    border-radius: 3em;
+}
+
+@media (max-width: 960px){
+    .container{
+        padding: 150px 90px;
+    }
+}
+
+.containerForm{
+    display: flex;
+    flex-direction: column;
+    color: var(--color-secondary);
+    gap: 10px;
+    width: 100%;
+}
+
+.title{
+    text-align: center;
+    font-size: xx-large;
+    color: var(--color-tertiary);
+}

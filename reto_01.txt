@@ -1,0 +1,9 @@
+Para el frontend, crea una app simple de React con Vite.
+Transforma el componente de Angular user-form localizado en los archivos html y ts a un componente de React.
+Hacer responsivo el HTML al ancho de pantalla.
+Cambiar la paleta a verde neón y mejorar la estética de la página (aunque no es el enfoque principal de este reto).
+
+Para el backend utiliza el archivo server.js.
+Crea el usuario de servicio de Mongo en una intancia local en una collection llamada Users.
+Crea el endpoint necesario para guardar la información del usuario en tu componente de React.
+Actualiza tus handlers en el frontend para hacer la llamada al endpoint.

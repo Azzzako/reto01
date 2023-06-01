@@ -1,0 +1,22 @@
+# Ignorar archivos y carpetas generados por el entorno de desarrollo
+/node_modules
+/.env
+
+# Ignorar archivos y carpetas generadas por editores de código
+/.vscode
+/.idea
+
+# Ignorar archivos y carpetas específicos
+/build
+/dist
+/logs
+/temp
+.DS_Store
+
+# Ignorar archivos con extensiones específicas
+*.log
+*.bak
+*.tmp
+
+# Ignorar directorios
+/dir1/
