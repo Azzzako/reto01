@@ -13,13 +13,21 @@ function App() {
       ...user,
       [e.target.name]: e.target.value
     })
+
+
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
     axios.post('http://localhost:3001/add', user)
-      setNewUser(!newUser)
-      console.log('usuario creado');
+    setNewUser(!newUser)
+    console.log('usuario creado');
+
+    setUser({
+      firstName: '',
+      lastName: '',
+      email: ''
+    })
   }
 
 
