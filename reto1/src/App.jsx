@@ -1,5 +1,6 @@
 import style from './styles.module.css'
 import { useState } from 'react'
+import { AiFillShop } from 'react-icons/ai'
 import axios from 'axios'
 
 function App() {
@@ -19,6 +20,13 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailValido.test(user.email)) {
+      alert('Invalid email format');
+      return;
+    }
+
     axios.post('http://localhost:3001/add', user)
     setNewUser(!newUser)
     console.log('usuario creado');
@@ -34,22 +42,31 @@ function App() {
   return (
     <>
       <div className={style.container}>
-        <h2 className={style.title}>User Form</h2>
-        <form onSubmit={handleSubmit}>
-          <div className={style.containerForm}>
 
-            <label>First Name:</label>
+        <div className={style.image}>
+        </div>
+        <form onSubmit={handleSubmit} className={style.containerForm}>
+          <AiFillShop
+            style={{ fontSize: 70 }}
+          />
+          <h1>Sign up to receive updates!</h1>
+
+          <div className={style.inputCont}>
+            <label htmlFor='firstName'>First Name:</label>
             <input type="text" name="firstName" value={user.firstName} required onChange={handlerFormUser} />
 
 
-            <label>Last Name:</label>
+            <label htmlFor='lastName'>Last Name:</label>
             <input type="text" name="lastName" value={user.lastName} required onChange={handlerFormUser} />
 
 
-            <label>Email:</label>
+            <label htmlFor='email'>Email:</label>
             <input type="email" name="email" value={user.email} required onChange={handlerFormUser} />
 
+
+
           </div>
+
           <button type="submit">Submit</button>
         </form>
       </div>
